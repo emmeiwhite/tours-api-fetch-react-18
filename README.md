@@ -37,3 +37,7 @@ Overall, the flow of the application should look something like this:
 - When the "read more" button is clicked, the Tour component updates its state to toggle a "read more" flag and conditionally renders the full description.
 
 - When the "re-fetch" button is clicked, the Tours component re-fetches the tours data from the URL and updates its state.
+
+<!-- Extra -->
+
+If you wish, create a Error.jsx component and show the 404 error or other errors if the API request fails
