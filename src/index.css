@@ -24,3 +24,15 @@
     transform: rotate(360deg);
   }
 }
+
+/* Pseudo Elements handling outside the JSX */
+.heading-text::after {
+  content: "";
+  position: absolute;
+  width: 112px;
+  background-color: #10b981;
+  height: 4px;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
