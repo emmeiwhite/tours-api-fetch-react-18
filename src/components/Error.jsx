@@ -1,4 +1,4 @@
-import errorSVG from "./assets/404.svg";
+import errorSVG from "../assets/404.svg";
 
 export default function Error({ msg }) {
   console.log(msg);
