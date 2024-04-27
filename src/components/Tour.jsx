@@ -1,7 +1,8 @@
 import { useState } from "react";
 
-export default function Tour({ id, image, info, name, price }) {
+export default function Tour({ id, image, info, name, price, handleDelete }) {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="max-w-[352px] font-roboto tracking-wide">
       <div className="relative">
@@ -44,7 +45,10 @@ export default function Tour({ id, image, info, name, price }) {
             </>
           )}
         </p>
-        <button className="capitalize rounded-sm text-center py-1 mt-6 border-2 w-full border-emerald-400 block ">
+        <button
+          className="capitalize rounded-sm text-center py-1 mt-6 border-2 w-full border-emerald-400 block"
+          onClick={() => handleDelete(id)}
+        >
           Not Interested
         </button>
       </div>

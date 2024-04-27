@@ -11,6 +11,12 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  const handleDelete = (id) => {
+    setTours((prevTours) => {
+      return prevTours.filter((tour) => tour.id !== id);
+    });
+  };
+
   const fetchData = async () => {
     try {
       setIsLoading(true);
@@ -43,7 +49,12 @@ export default function App() {
           <span className="inline-block heading-text relative">Our Tours</span>
         </h1>
 
-        {tours.length > 0 && <TourList tours={tours} />}
+        {tours.length > 0 && (
+          <TourList
+            tours={tours}
+            handleDelete={handleDelete}
+          />
+        )}
       </div>
     </section>
   );
