@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Loader from "./components/Loader";
-import Error from "./components/Error";
-import TourList from "./components/TourList";
+import Loader from "./Loader";
+import Error from "./Error";
+import TourList from "./TourList";
 
 const url = "https://www.course-api.com/react-tours-project";
 
